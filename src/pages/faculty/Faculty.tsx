@@ -700,7 +700,7 @@ const FacultyPage = () => {
       const details = await getFacultyDetails(faculty.id);
       // Build subject metadata for view rendering
       const ids = Array.from(new Set((details.subjects || []).map(s => s.subjectId).filter(Boolean)));
-      let meta: Record<string, { name: string; type?: string; hours?: number }> = {};
+      const meta: Record<string, { name: string; type?: string; hours?: number }> = {};
       if (ids.length > 0) {
         const { data } = await (supabase as any)
           .from('subjects')

@@ -392,7 +392,7 @@ export async function generateTimetable({
     }
 
     for (const s of orderedTheory) {
-      let left = remaining.get(s.id) || 0;
+      const left = remaining.get(s.id) || 0;
       if (left <= 0) continue;
 
       // iterate days preferring those with capacity and where the same subject is not already present that day

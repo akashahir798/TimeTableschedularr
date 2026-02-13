@@ -3,9 +3,9 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Routes, Route } from "react-router-dom";
+
 // Admin Pages
 import Index from "./pages/admin/Index";
-import AdminLogin from "./pages/admin/AdminLogin";
 import Login from "./pages/Login";
 import SubjectManagement from "./pages/admin/SubjectManagement";
 import Timetable from "./pages/admin/Timetable";
@@ -20,7 +20,6 @@ import Faculty from "./pages/faculty/Faculty";
 import FacultyDashboard from "./pages/faculty/FacultyDashboard";
 
 // Super Admin Pages
-import SuperAdminLogin from "./pages/superadmin/SuperAdminLogin";
 import SuperAdminDashboard from "./pages/superadmin/SuperAdminDashboard";
 import AdminManagement from "./pages/superadmin/AdminManagement";
 import Departments from "./pages/superadmin/Departments";
@@ -44,11 +43,14 @@ const App = () => (
       <Sonner />
         <ErrorBoundary>
           <Routes>
+            {/* Landing & unified login */}
             <Route path="/" element={<RoleSelect />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/admin-login" element={<AdminLogin />} />
+            {/* Backwards-compatible aliases for older login URLs */}
+            <Route path="/unified-login" element={<Login />} />
+            <Route path="/admin-login" element={<Login />} />
+            <Route path="/super-admin-login" element={<Login />} />
             <Route path="/admin" element={<Index />} />
-            <Route path="/super-admin-login" element={<SuperAdminLogin />} />
             <Route path="/super-admin" element={<SuperAdminDashboard />} />
             <Route path="/super-admin/admin-management" element={<AdminManagement />} />
             <Route path="/super-admin/departments" element={<Departments />} />

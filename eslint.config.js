@@ -23,7 +23,13 @@ export default tseslint.config(
         "warn",
         { allowConstantExport: true },
       ],
+      // The codebase currently uses a number of loosely-typed helpers,
+      // so we relax some of the stricter TypeScript lint rules to keep
+      // linting focused on actual correctness issues.
       "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-empty-object-type": "off",
+      "no-empty": "off",
     },
   }
 );

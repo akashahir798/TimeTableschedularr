@@ -117,7 +117,7 @@ const TimetableViewer = ({ departmentId, year, section }: TimetableViewerProps) 
     try {
       for (const [subjectName, periods] of Object.entries(subjectHours)) {
         // Try to find faculty from faculty_subject_assignments first
-        let { data: facultyData } = await (supabase as any)
+        const { data: facultyData } = await (supabase as any)
           .from('faculty_subject_assignments')
           .select(`
             faculty_members!inner(name),

@@ -91,7 +91,7 @@ const AdminNavbar = () => {
   }, []);
 
   const handleSuperAdminLogin = () => {
-    navigate("/super-admin-login");
+    navigate("/login");
   };
 
   const handleFacultyLogin = () => {

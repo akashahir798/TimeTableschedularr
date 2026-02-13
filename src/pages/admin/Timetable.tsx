@@ -187,7 +187,7 @@ function Timetable() {
   const exportPDF = async () => {
     const pdfMake = (await import('pdfmake/build/pdfmake')).default;
     const vfsFonts = await import('pdfmake/build/vfs_fonts');
-    // @ts-ignore
+    // @ts-expect-error - pdfMake typings don't include vfs on the default export
     pdfMake.vfs = vfsFonts.pdfMake.vfs;
 
     const body = [

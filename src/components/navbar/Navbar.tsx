@@ -62,11 +62,11 @@ const Navbar = () => {
     navigate("/");
   };
   const handleSuperAdminLogin = () => {
-    navigate("/super-admin-login");
+    navigate("/login");
   };
 
   const handleAdminConsole = () => {
-    navigate("/admin-login");
+    navigate("/login");
   };
 
   const handleFacultyLogin = () => {

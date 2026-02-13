@@ -125,21 +125,21 @@ const Login = () => {
   };
 
   return (
-    <main className="min-h-screen relative overflow-hidden bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+    <main className="min-h-screen relative overflow-hidden bg-gradient-to-br from-slate-950 via-sky-950 to-slate-900">
       {/* Animated Time-Themed Background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] rounded-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 blur-3xl animate-pulse" />
-        <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-purple-500/20 to-indigo-500/20 blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-gradient-to-r from-blue-400/10 to-purple-400/10 blur-2xl animate-pulse" style={{ animationDelay: '1s' }} />
-        {/* Clock-like circular patterns */}
-        <div className="absolute top-20 right-20 w-32 h-32 border-2 border-blue-400/20 rounded-full animate-spin" style={{ animationDuration: '20s' }} />
-        <div className="absolute bottom-32 left-32 w-24 h-24 border-2 border-purple-400/20 rounded-full animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }} />
+        <div className="absolute top-[-15%] right-[-10%] w-[620px] h-[620px] rounded-full bg-gradient-to-br from-sky-500/30 via-cyan-400/20 to-transparent blur-3xl animate-pulse" />
+        <div className="absolute bottom-[-20%] left-[-15%] w-[540px] h-[540px] rounded-full bg-gradient-to-tr from-blue-500/25 via-sky-500/20 to-transparent blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] rounded-full bg-gradient-to-r from-sky-400/25 via-cyan-300/20 to-blue-500/15 blur-2xl animate-pulse" style={{ animationDelay: '0.7s' }} />
+        {/* Orbit / clock-like circular patterns */}
+        <div className="absolute top-20 right-20 w-32 h-32 border-2 border-sky-400/25 rounded-full animate-spin" style={{ animationDuration: '22s' }} />
+        <div className="absolute bottom-32 left-32 w-24 h-24 border-2 border-sky-500/25 rounded-full animate-spin" style={{ animationDuration: '16s', animationDirection: 'reverse' }} />
       </div>
 
       {/* Back Button */}
       <button
         onClick={() => navigate('/')}
-        className="absolute top-6 left-6 z-20 group flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg hover:bg-white/20 transition-all duration-300 hover:-translate-x-1 text-white focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-purple-900"
+        className="absolute top-6 left-6 z-20 group flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900/60 backdrop-blur-md border border-sky-500/40 shadow-[0_0_20px_rgba(56,189,248,0.6)] hover:bg-slate-900/80 transition-all duration-300 hover:-translate-x-1 text-sky-50 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2 focus:ring-offset-slate-900"
         aria-label="Go back to home"
       >
         <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-0.5" />
@@ -152,41 +152,41 @@ const Login = () => {
           
           {/* Header */}
           <div className="text-center space-y-4">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 text-white shadow-2xl shadow-purple-500/50 mb-2 relative">
+            <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-sky-500 via-cyan-400 to-blue-500 text-white shadow-[0_0_45px_rgba(56,189,248,0.7)] mb-2 relative">
               <Clock className="w-10 h-10 animate-pulse" />
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-400/20 to-purple-400/20 animate-ping" style={{ animationDuration: '3s' }} />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-sky-400/35 to-cyan-300/30 animate-ping" style={{ animationDuration: '3s' }} />
             </div>
             <div>
-              <h1 className="text-4xl font-bold text-white tracking-tight mb-2">AI Time Portal</h1>
-              <p className="text-blue-200 text-base">Smart scheduling at your fingertips</p>
+              <h1 className="text-4xl font-extrabold text-sky-50 tracking-tight mb-2">AI Time Portal</h1>
+              <p className="text-sky-200 text-base">Unified sign-in for Super Admin, Admin & Faculty</p>
             </div>
           </div>
 
           {/* Login Card */}
-          <Card className="rounded-2xl border border-white/10 shadow-2xl shadow-black/20 bg-white/10 backdrop-blur-xl overflow-hidden">
-            <CardContent className="p-8">
+          <Card className="rounded-3xl border border-sky-500/50 shadow-[0_0_55px_rgba(56,189,248,0.55)] bg-slate-950/70 backdrop-blur-2xl overflow-hidden">
+            <CardContent className="p-8 md:p-10">
               <form onSubmit={handleLogin} className="space-y-5">
                 
                 {/* Email Field */}
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="text-sm font-semibold text-white">
+                  <Label htmlFor="email" className="text-sm font-semibold text-sky-100">
                     Email / Username
                   </Label>
                   <div className="relative group">
-                    <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5 text-blue-300 group-focus-within:text-purple-300 transition-colors" />
+                    <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5 text-sky-300 group-focus-within:text-sky-200 transition-colors" />
                     <Input
                       id="email"
                       type="text"
-                      placeholder="Enter your email or username"
+                      placeholder="you@college.edu or username"
                       value={email}
                       onChange={(e) => {
                         setEmail(e.target.value);
                         if (errors.email) setErrors({ ...errors, email: undefined });
                       }}
-                      className={`h-12 pl-11 pr-4 rounded-xl border-2 bg-white/5 text-white placeholder:text-blue-200/50 transition-all duration-200 ${
+                      className={`h-12 pl-11 pr-4 rounded-xl border-2 bg-slate-900/60 text-sky-50 placeholder:text-sky-300/40 transition-all duration-200 ${
                         errors.email 
-                          ? 'border-red-400 focus:border-red-400 focus:ring-4 focus:ring-red-500/20' 
-                          : 'border-white/20 focus:border-purple-400 focus:ring-4 focus:ring-purple-500/20'
+                          ? 'border-red-400/80 focus:border-red-400 focus:ring-4 focus:ring-red-500/25' 
+                          : 'border-sky-500/60 focus:border-sky-400 focus:ring-4 focus:ring-sky-500/25'
                       }`}
                       aria-label="Email or Username"
                       aria-describedby={errors.email ? "email-error" : undefined}
@@ -203,11 +203,11 @@ const Login = () => {
 
                 {/* Password Field */}
                 <div className="space-y-2">
-                  <Label htmlFor="password" className="text-sm font-semibold text-white">
+                  <Label htmlFor="password" className="text-sm font-semibold text-sky-100">
                     Password
                   </Label>
                   <div className="relative group">
-                    <Lock className="absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5 text-blue-300 group-focus-within:text-purple-300 transition-colors" />
+                    <Lock className="absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5 text-sky-300 group-focus-within:text-sky-200 transition-colors" />
                     <Input
                       id="password"
                       type={showPassword ? "text" : "password"}
@@ -217,10 +217,10 @@ const Login = () => {
                         setPassword(e.target.value);
                         if (errors.password) setErrors({ ...errors, password: undefined });
                       }}
-                      className={`h-12 pl-11 pr-12 rounded-xl border-2 bg-white/5 text-white placeholder:text-blue-200/50 transition-all duration-200 ${
+                      className={`h-12 pl-11 pr-12 rounded-xl border-2 bg-slate-900/60 text-sky-50 placeholder:text-sky-300/40 transition-all duration-200 ${
                         errors.password 
-                          ? 'border-red-400 focus:border-red-400 focus:ring-4 focus:ring-red-500/20' 
-                          : 'border-white/20 focus:border-purple-400 focus:ring-4 focus:ring-purple-500/20'
+                          ? 'border-red-400/80 focus:border-red-400 focus:ring-4 focus:ring-red-500/25' 
+                          : 'border-sky-500/60 focus:border-sky-400 focus:ring-4 focus:ring-sky-500/25'
                       }`}
                       aria-label="Password"
                       aria-describedby={errors.password ? "password-error" : undefined}
@@ -229,7 +229,7 @@ const Login = () => {
                     <button
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3.5 top-1/2 -translate-y-1/2 text-blue-300 hover:text-purple-300 transition-colors p-1 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                      className="absolute right-3.5 top-1/2 -translate-y-1/2 text-sky-300 hover:text-sky-100 transition-colors p-1 rounded-lg hover:bg-sky-500/20 focus:outline-none focus:ring-2 focus:ring-sky-400"
                       aria-label={showPassword ? "Hide password" : "Show password"}
                       tabIndex={-1}
                     >
@@ -251,19 +251,19 @@ const Login = () => {
                       id="remember"
                       checked={rememberMe}
                       onCheckedChange={(checked) => setRememberMe(checked as boolean)}
-                      className="rounded border-white/30 data-[state=checked]:bg-purple-600 data-[state=checked]:border-purple-600"
+                      className="rounded border-sky-400/50 data-[state=checked]:bg-sky-500 data-[state=checked]:border-sky-500"
                       aria-label="Remember me"
                     />
                     <Label 
                       htmlFor="remember" 
-                      className="text-sm text-blue-100 font-medium cursor-pointer select-none hover:text-white transition-colors"
+                      className="text-sm text-sky-100 font-medium cursor-pointer select-none hover:text-sky-50 transition-colors"
                     >
                       Remember me
                     </Label>
                   </div>
                   <button
                     type="button"
-                    className="text-sm text-purple-300 hover:text-purple-200 font-medium transition-colors focus:outline-none focus:underline rounded px-1"
+                    className="text-sm text-sky-300 hover:text-sky-200 font-medium transition-colors focus:outline-none focus:underline rounded px-1"
                     onClick={() => toast.info("Password reset functionality coming soon!")}
                   >
                     Forgot Password?
@@ -274,7 +274,7 @@ const Login = () => {
                 <Button
                   type="submit"
                   disabled={loading}
-                  className="w-full h-12 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-purple-900 mt-6"
+                  className="w-full h-12 rounded-xl bg-gradient-to-r from-sky-500 via-cyan-400 to-blue-500 hover:from-sky-500 hover:via-cyan-300 hover:to-blue-500 text-slate-950 font-semibold shadow-[0_0_35px_rgba(56,189,248,0.7)] transition-all duration-300 hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2 focus:ring-offset-slate-950 mt-6"
                 >
                   {loading ? (
                     <>
@@ -288,18 +288,24 @@ const Login = () => {
               </form>
 
               {/* Footer Note */}
-              <div className="mt-6 pt-6 border-t border-white/10">
-                <p className="text-xs text-center text-blue-200 leading-relaxed flex items-center justify-center gap-2">
+              <div className="mt-6 pt-6 border-t border-sky-500/40">
+                <p className="text-xs text-center text-sky-200 leading-relaxed flex items-center justify-center gap-2">
                   <Clock className="w-3.5 h-3.5" />
-                  AI-powered time management • Auto-redirect enabled
+                  AI-powered role detection • You’ll be redirected to the right dashboard
                 </p>
               </div>
             </CardContent>
           </Card>
 
           {/* Additional Info */}
-          <p className="text-center text-sm text-blue-200">
-            Need help? <button className="text-purple-300 hover:text-purple-200 font-medium hover:underline" onClick={() => toast.info("Support: support@sonattg.edu")}>Contact Support</button>
+          <p className="text-center text-sm text-sky-200 mt-4">
+            Need help?{" "}
+            <button
+              className="text-sky-300 hover:text-sky-100 font-medium hover:underline"
+              onClick={() => toast.info("Support: support@sonattg.edu")}
+            >
+              Contact Support
+            </button>
           </p>
         </div>
       </div>

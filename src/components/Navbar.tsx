@@ -14,10 +14,10 @@ export function Navbar() {
       </div>
       
       <div className="flex items-center gap-4">
-        <Link to="/admin-login">
-            <Button variant="ghost" className="text-sm font-medium text-blue-200 hover:text-white hover:bg-white/10">
+        <Link to="/login">
+          <Button variant="ghost" className="text-sm font-medium text-blue-200 hover:text-white hover:bg-white/10">
             Sign In
-            </Button>
+          </Button>
         </Link>
       </div>
     </nav>
